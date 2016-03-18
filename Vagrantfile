@@ -19,6 +19,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 1337, host: 1337
   # Add port-forward for other example apps
   config.vm.network "forwarded_port", guest: 8000, host: 8000
+  # Add port-forward for Webpack
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
